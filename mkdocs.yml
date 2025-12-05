@@ -3,7 +3,7 @@
 # -------------------------------------------------------------
 # CONFIGURACIÓN GENERAL DEL SITIO
 # -------------------------------------------------------------
-site_name: Documentación de Calculadora Python # Define el título que aparecerá en la barra de navegación y en la etiqueta <title> del navegador.
+site_name: PPS-Unidad-Tarea-PPS # Define el título que aparecerá en la barra de navegación y en la etiqueta <title> del navegador.
 
 # -------------------------------------------------------------
 # ESTRUCTURA DE NAVEGACIÓN (MENÚ)
