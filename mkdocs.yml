@@ -12,7 +12,12 @@ site_name: PPS-Unidad-Tarea-PPS # Define el título que aparecerá en la barra d
 nav:
   # El nombre de la sección en el menú: nombre_archivo.md
   - Home: index.md             # Primer elemento del menú, enlaza con el archivo 'index.md'.
-  - Uso: guia_uso.md           # Segundo elemento del menú, enlaza con el archivo 'guia_uso.md'.
+  - Git: git.md           # Segundo elemento del menú, enlaza con el archivo 'guia_uso.md'.
+  - GitActions: gitActions.md
+  - GitPages: gitPages.md
+  - Docker: docker.md
+  - Conclusiones: conclusiones.md
+  - Otros: 
   # Se pueden añadir subsecciones anidando listas:
   # - Referencia: 
   #   - Funciones: referencia/funciones.md
