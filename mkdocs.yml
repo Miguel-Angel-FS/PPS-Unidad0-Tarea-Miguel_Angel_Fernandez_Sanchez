@@ -17,7 +17,7 @@ nav:
   - GitPages: gitPages.md
   - Docker: docker.md
   - Conclusiones: conclusiones.md
-  - Otros: 
+  - Otros: otros.md
   # Se pueden añadir subsecciones anidando listas:
   # - Referencia: 
   #   - Funciones: referencia/funciones.md
