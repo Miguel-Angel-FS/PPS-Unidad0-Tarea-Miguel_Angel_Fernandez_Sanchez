@@ -28,5 +28,4 @@ Tras verificar que el contenedor estaba en ejecución, he visualizado la página
 
 Por último, he obtenido el archivo con toda la información del contenedor utilizando el comando:
 
-```bash
 docker inspect nombreContenedor
