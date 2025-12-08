@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>GitActions - PPS-Unidad-Tarea-PPS</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">PPS-Unidad-Tarea-PPS</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../git/" class="nav-link">Git</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">GitActions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../gitPages/" class="nav-link">GitPages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../docker/" class="nav-link">Docker</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../conclusiones/" class="nav-link">Conclusiones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../otros/" class="nav-link">Otros</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../git/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../gitPages/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#documentacion-del-workflow" class="nav-link">Documentación del Workflow</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#creacion-del-archivo-de-configuracion-mkdocsyml" class="nav-link">Creación del archivo de configuración mkdocs.yml</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#creacion-del-workflow-en-github-actions" class="nav-link">Creación del Workflow en GitHub Actions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ejecucion-del-workflow" class="nav-link">Ejecución del Workflow</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configuracion-de-github-pages" class="nav-link">Configuración de GitHub Pages</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#comprobacion-del-despliegue" class="nav-link">Comprobación del despliegue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusión</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="documentacion-del-workflow">Documentación del Workflow</h1>
+<h2 id="creacion-del-archivo-de-configuracion-mkdocsyml">Creación del archivo de configuración <code>mkdocs.yml</code></h2>
+<p>El primer paso para configurar el workflow es crear el archivo <strong><code>mkdocs.yml</code></strong> en la raíz del repositorio.<br />
+Este archivo será utilizado por MkDocs para generar la documentación del proyecto.</p>
+<p>📸 Captura del proceso:</p>
+<p><img width="1920" height="1051" alt="Primera" src="https://github.com/user-attachments/assets/6236c0d0-aff1-482b-90e8-d1d1defa22ef" /></p>
+<hr />
+<h2 id="creacion-del-workflow-en-github-actions">Creación del Workflow en GitHub Actions</h2>
+<p>Una vez creado el archivo <code>mkdocs.yml</code>, procedemos a crear el archivo del workflow:</p>
+<p>📁 Ruta:<br />
+<code>.github/workflows/CreacionDocumentacion.yml</code></p>
+<p>Este archivo contiene la automatización para generar la documentación en GitHub Pages mediante MkDocs.</p>
+<p>📸 Captura del proceso:</p>
+<p><img width="1920" height="1048" alt="Segunda" src="https://github.com/user-attachments/assets/cbd7cb5a-82d3-4c30-99e2-14fb9860aca9" /></p>
+<hr />
+<h2 id="ejecucion-del-workflow">Ejecución del Workflow</h2>
+<p>Después de subir los archivos al repositorio, vamos a la pestaña <strong>Actions</strong> y verificamos que el workflow se ha ejecutado correctamente.</p>
+<p>Si todo está bien, aparecerá un <strong>check verde</strong> indicando que la acción se ha realizado con éxito.<br />
+Podemos abrir los logs para comprobar que no ha ocurrido ningún error.</p>
+<p>📸 Ejemplo de ejecución correcta:</p>
+<p><img width="1920" height="1051" alt="Tercera" src="https://github.com/user-attachments/assets/ad98f70a-ea15-4761-8fc7-ff79f642a71d" />
+<img width="1920" height="1049" alt="Cuarta" src="https://github.com/user-attachments/assets/f28786f9-7595-4bf1-84d5-713938a5d8ef" /></p>
+<hr />
+<h2 id="configuracion-de-github-pages">Configuración de GitHub Pages</h2>
+<p>Si el workflow ha generado correctamente los archivos, configuramos <strong>GitHub Pages</strong>:</p>
+<p>Ruta:<br />
+<strong>Settings → Pages</strong></p>
+<p>Seleccionamos la rama <code>gh-pages</code> como fuente de despliegue y guardamos los cambios.</p>
+<p>📸 Ejemplo de configuración:</p>
+<p><img width="1920" height="1052" alt="Quinta" src="https://github.com/user-attachments/assets/598b4516-8e68-4305-8928-1758730289a5" /></p>
+<hr />
+<h2 id="comprobacion-del-despliegue">Comprobación del despliegue</h2>
+<p>Regresamos a la página principal del repositorio y verificamos en la sección <strong>Deployments</strong> que la acción más reciente tenga estado correcto.</p>
+<p>Si la publicación ha sido exitosa, se mostrará la URL de GitHub Pages donde podremos visualizar nuestra página web estática generada con MkDocs.</p>
+<p>📸 Ejemplos:</p>
+<p><img width="1920" height="1049" alt="Sexta" src="https://github.com/user-attachments/assets/d1437148-5700-451f-a3c2-ceb4397f445d" />
+<img width="1920" height="1051" alt="Septimo" src="https://github.com/user-attachments/assets/61ed0cd9-3bba-4d97-91b7-f12057d958c6" />
+<img width="1920" height="1050" alt="Octava y ultima" src="https://github.com/user-attachments/assets/af17ec2f-b67c-4d90-ae64-c511b6a23579" /></p>
+<hr />
+<h2 id="conclusion">Conclusión</h2>
+<p>Hemos configurado correctamente un workflow automatizado para generar y desplegar documentación empleando <strong>MkDocs</strong> y <strong>GitHub Pages</strong>.<br />
+Gracias a esta automatización, cada cambio realizado en la documentación se publicará automáticamente en nuestra web estática sin intervención manual.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
